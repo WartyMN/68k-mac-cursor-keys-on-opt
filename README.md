@@ -1,5 +1,3 @@
-# WARNING: THIS INIT IS CURRENTLY CRASHING. DO NOT USE IT. HOPE TO HAVE FIX SOON.
-
 # 68k-mac-cursor-keys-on-opt
 This is a system extension (INIT) for Mac System 6.x through 9.x that adds alternate key layout when either Option key is held down. See my 68k-mac-cursor-keys for a version that works when CapsLock is engaged.
 
