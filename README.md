@@ -2,7 +2,10 @@
 This is a system extension (INIT) for Mac System 6.x through 9.x that adds alternate key layout when either Option key is held down. See my 68k-mac-cursor-keys for a version that works when CapsLock is engaged.
 
 ## What this system extension (INIT) does
-When Option is down, turns [{ key into left cursor, \\| key into right cursor, =+ key into up cursor, ]} key into down cursor.  
+When Option is down, turns a set of normal keys into an inverted T arrangement of cursor keys. There are two variants of the tool, you can choose the one that matches your style best, or try running with both (not recommended for speed/memory reasons, but will work). 
+
+### Variant 1: "Opt Cursors" -- Keys Near Backspace
+When the Option key is down, it will turn [ key into left cursor, \\ key into right cursor, = key into up cursor, ] key into down cursor.
 
 ```
        +------+
@@ -16,14 +19,28 @@ When Option is down, turns [{ key into left cursor, \\| key into right cursor, =
 +--------------------+
 ```
 
+### Variant 2: "Opt Cursors IJKL" -- Keys at Right-hand Home Position
+When the Option key is down, it will turn J into left cursor, L into right cursor, I into up cursor, K into down cursor.
+```
+       +------+
+       |   I  |
+       |      |
+       |  UP  |
++--------------------+
+|   J  |   K  |   L  |
+|      |      |      |
+| LEFT | DOWN | RIGHT|
++--------------------+
+```
+
 ## Why you might want this:
 You have an original 128/512 Mac keyboard and wish it had cursor keys
-You have a Mac Plus keyboard, Apple Desktop Bus Keyboard ("IIGS"), M0116 (II/SE "standard keyboard"), or Apple Keyboard II and wished you had cursor keys in an inverted T arrangement
+You have a Mac Plus keyboard, Apple Desktop Bus Keyboard ("IIGS"), M0116 (II/SE "standard keyboard"), or Apple Keyboard II and wished you had cursor keys in an inverted T arrangement. Maybe you like the original MacWrite and wish it supported cursor keys: with Opt Cursors, it does!
 
 ## How to install it
 1. Get it onto your Mac somehow
-2. Expand the .SIT file
-3. Drop the INIT/extension on your system folder. For System 7+, the Mac will further drop it into your System Extensions folder
+2. Expand the .sit.hqx file
+3. Drop your preferred version of the INIT/extension on your system folder. For System 7+, the Mac will automatically move it into your System Extensions folder. You can install both INITs at the same time if you wish: they have different filenames and icons to help you distinguish.
 
 ## How to use it
 - Whenever you need cursor keys, hold down one of the Option keys, and use [, ], \\, and = as cursor keys. All other keys will operate as normal (but Option-modified) keys.
@@ -33,7 +50,7 @@ You have a Mac Plus keyboard, Apple Desktop Bus Keyboard ("IIGS"), M0116 (II/SE 
 
 ## How to uninstall it
 1. Open your System Folder
-2. Drag the "Option Cursors" system extension file out of the System Folder
+2. Drag the "Opt Cursors" or "Opt Cursors IJKL" system extension file out of the System Folder
 3. Restart your mac
 
 ## Does it have a Control Panel?
@@ -41,16 +58,14 @@ No. Nothing is configurable, in the interest of keeping size to a minimum.
 
 ## Which systems is it compatible with?
 Good question. So far, it has been tested with: 
-- Mac Plus with 128/512 keyboard running 6.0.8 (US)
-- Mac Classic with Apple Extended Keyboard running 7.1 (US)
-- Sheepshaver (OS X) running 9.0 (Japanese)
+- Macintosh Plus with 4MB, 6.0.8
+- Mini vMac - various Mac II and Mac Plus configurations
+- Basilisk II - Mac IIci - 7.5.5
+
 If you test it on another system, please let me know if it works or not. I would expect it to not work perfectly for any language/country that has a different arrangement in that part of the keyboard. 
 
 ## Will it work in all apps?
-No, but it should work in all apps that are well-behaved, and which actually have some kind of cursor-based behavior. I noticed in testing, for example, that MacWrite (pre-II versions) didn't do anything with the cursor input. I tried MacWrite with a Mac that had native cursor keys, they didn't do anything either! Your mileage may vary. 
-
-## Why did you make those keys instead of IJKL?
-IJKL does make a better inverted T for cursors, the but problem with that is that you basically can't use the keyboard for any typing at all when you are in that mode. 
+No, but it should work in all apps that are well-behaved, and which actually have some kind of cursor-based behavior. It actually works in some apps that do not support the native cursor keys, such as MacWrite.  Your mileage may vary.
 
 ## Can it do my homework?
 Not currently. All it does is map 4 keys. If you have any idea for other keys, I'm not adverse to mapping more. The only concern I have is that the more keys that get remapped, the more the hit on typing performance might be noticeable. I didn't do any testing though, so it's possible it's not a concern. I'm sure it wouldn't be on anything faster than a bare 68000.
